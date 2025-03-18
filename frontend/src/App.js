@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Logout from "./components/Logout";
+import Agent from "./components/Agent";
 import "./App.css";
 
 const PrivateRoute = ({ element }) => {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<AuthRoute element={<Login />} />} />
         <Route path="/register" element={<AuthRoute element={<Register />} />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/agent" element={<PrivateRoute element={<Agent />} />} />
       </Routes>
     </Router>
   );

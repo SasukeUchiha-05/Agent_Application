@@ -27,6 +27,7 @@ const Register = () => {
         email,
         password,
       });
+      console.log(res);
 
       setMessage("Registration successful! Redirecting to login...");
       setTimeout(() => navigate("/login"), 2000); // Redirect after 2s      
