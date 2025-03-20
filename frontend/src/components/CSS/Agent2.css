@@ -1,0 +1,43 @@
+.response-content {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.response-heading {
+  color: #007bff;
+  font-size: 1.4em;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.response-paragraph {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.response-source-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.response-source-list li {
+  margin-bottom: 5px;
+}
+
+.response-source-list a {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.response-source-list a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}

@@ -30,8 +30,12 @@ const Home = () => {
     navigate("/logout"); 
   };
 
-  const goToAgent = () => {
+  const goToAgent1 = () => {
     navigate("/agent"); 
+  };
+  
+  const goToAgent2 = () => {
+    navigate("/research"); 
   };
 
   return (
@@ -39,8 +43,13 @@ const Home = () => {
       <button className="logout" onClick={handleLogout}>Logout</button>
       <h1>{message}</h1>
 
-      <button className="agent-icon" onClick={goToAgent} title="Chat with AI">
+      <button className="agent-icon" onClick={goToAgent1} title="Chat with AI">
         <FaRobot size={40} color="#4CAF50" />
+      </button>
+
+      
+      <button className="agent-icon" onClick={goToAgent2} title="Chat with AI">
+      <FaRobot size={40} color="#F44336" />
       </button>
     </div>
   );

@@ -40,5 +40,26 @@ app.post("/ask-agent", async (req, res) => {
     }
 });
 
+
+app.use(express.json()); // ✅ Required to parse JSON body
+
+const AGENT2_API_URL = "http://localhost:5002/research"; // ✅ Fixed endpoint
+
+app.post("/research", async (req, res) => {
+    try {
+      console.log("sdlkhngsdolkvnfsdlv");
+        const { query } = req.body;
+        const response = await axios.post(AGENT2_API_URL, { query });
+
+        console.log(response.data);
+
+        res.json(response.data); // ✅ Return full response, avoiding unnecessary nesting
+    } catch (error) {
+        console.error("Error calling Python API:", error);
+        res.status(500).json({ error: "Failed to get response from AI agent" });
+    }
+});
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
